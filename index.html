@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="ie=edge">
+
+  <title>Movies App</title>
+</head>
+
+<body>
+  <div class="main-heading">
+    <h1>Rate your favourite movies</h1>
+  </div>
+  <form id='movieForm'>
+    <div class="form-group">
+      <label for="movieTitle">Movie</label>
+      <input required id='movie' type="text" name="movie">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rate the movie (Bad=1, Excellent=10)</label>
+      <input required id='rating' type="number" name="rating" max="10" min="0">
+    <div>
+      <button type="submit" id="add-input">submit</button>
+    </div>
+  </form>
+ <br>
+ <table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Title <i id="movie" class="fas fa-sort-down"></i></th>
+
+      <th scope="col">Rating <i id="rating" class="fas fa-sort-down"></i></th>
+      <th scope="col">Delete </i></th>
+    </tr>
+  </thead>
+  <tbody id="movie-table-body">
+    
+  </tbody>
+</table>
+
+  <script
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+    crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
