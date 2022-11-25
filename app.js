@@ -7,14 +7,14 @@ let movieList = [];
 
 $(function() {
 // on the submit event save the value of the input into variables movie and rating.
-    $('movieForm')
+    $('#movieForm')
     .on('submit',function(evt){
         evt.preventDefault();
         let movie = $('#movie').val();
         let rating = $('#rating').val();
 
         let movieData = {movie, rating, currentId};
-        const HTMLtoAppend = createMovieDataHTML(movieData);
+        const HTMLtoAppend = createMovieDataHTML(movieData); //what is this method?
         currentId++;
         movieList.push(movieData);
        
@@ -24,7 +24,7 @@ $(function() {
     }); 
 
 
-    $("tbody").on("click", ".btn.btn-danger", function(evt) {
+    $("movie-table-body").on("click", ".btn.btn-danger", function(evt) {
         // find the index where this movie is
         let indexToRemoveAt = moviesList.findIndex(movie => movie.currentId === +$(evt.target).data("deleteId"))
         
@@ -40,7 +40,7 @@ $(function() {
     function createMovieDataHTML(data) {
         return `
           <tr>
-            <td>${data.title}</td>
+            <td>${data.movie}</td>
             <td>${data.rating}</td>
             <td>
               <button class="btn btn-danger" data-delete-id=${data.currentId}>
